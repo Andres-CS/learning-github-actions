@@ -1,5 +1,5 @@
 name: GHActions Label Demo
-run-name: ${{ github.actor }}
+run-name: Workflow on Labels - ${{ github.actor }}
 on:
   label:
     types: [created, edited, deleted]
