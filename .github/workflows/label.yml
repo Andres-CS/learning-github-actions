@@ -1,10 +1,8 @@
 name: GHActions Label Demo
 run-name: ${{ github.actor }}
-
 on:
   label:
-    types: created
-
+    types: [created, edited, deleted]
 jobs:
   GHActions:
     steps:
