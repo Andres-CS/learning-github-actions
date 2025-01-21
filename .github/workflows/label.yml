@@ -1,0 +1,11 @@
+name: GHActions Label Demo
+run-name: ${{ github.actor }}
+
+on:
+  label:
+    types: created
+
+jobs:
+  GHActions:
+    step:
+      - run: echo "Running GH Action when a label is created"
