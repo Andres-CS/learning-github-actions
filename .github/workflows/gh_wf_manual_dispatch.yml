@@ -4,7 +4,7 @@ run-name: Workflow Trigger Manually and not by event
 on:
   - workflow_dispatch
 
-job:
+jobs:
   manual:
     runs-on: ubuntu-latest
     steps:
