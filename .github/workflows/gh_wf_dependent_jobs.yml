@@ -13,11 +13,13 @@ jobs:
       - run: echo "This job is a test  job on Ubuntu-Latest"
   
   lint:
+    needs: test
     runs-on: windows-latest
     steps:
       - run: echo "This is a lint job on windows-Latest"
   
   release:
+    needs: lint
     runs-on: macos-latest
     steps:
       - run: echo "This is a release job MacOS-Latest"
