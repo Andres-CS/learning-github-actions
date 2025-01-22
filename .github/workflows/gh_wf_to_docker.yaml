@@ -1,0 +1,24 @@
+name: ToDocker
+run-name: push to docker
+
+on:
+  push:
+    branches:
+    - main
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up docker Buidx
+        uses: docker/setup-builx-action@v3
+
+      - name: Build
+        uses: docker/build-push-action@v6
+        with:
+          load: true
+          tags: ghactionmyimage:latest
+
+      - name: Inspect
+        run: |
+          docker image inspect ghactionmyimage:latest
+        
