@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up docker Buidx
-        uses: docker/setup-builx-action@v3
+        uses: docker/setup-buildx-action@v3
 
       - name: Build
         uses: docker/build-push-action@v6
