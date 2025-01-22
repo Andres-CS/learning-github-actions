@@ -5,6 +5,7 @@ on:
   - workflow_dispatch
 
 job:
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo "Hello manually"
+  manual:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello manually"
