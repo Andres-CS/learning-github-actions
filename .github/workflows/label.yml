@@ -7,4 +7,4 @@ jobs:
   GHActions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running GH Action when a label is created"
+      - run: echo "Running GH Action when a label was either created, edited or delete."

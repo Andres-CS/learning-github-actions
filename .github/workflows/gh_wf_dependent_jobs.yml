@@ -1,0 +1,23 @@
+name: GHAction WF - Dependent Jobs
+run-name: GH-WF-Depedent Jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubunut-latest
+    steps:
+      - run: echo "This job is a test  job"
+  
+  lint:
+    runs-on: ubunut-latest
+    steps:
+      - run: echo "This is a lint job"
+  
+  release:
+    runs-on: ubunut-latest
+    steps:
+      - run: echo "This is a release job"
