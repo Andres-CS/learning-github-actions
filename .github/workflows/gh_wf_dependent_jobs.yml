@@ -8,16 +8,16 @@ on:
 
 jobs:
   test:
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "This job is a test  job"
+      - run: echo "This job is a test  job on Ubuntu-Latest"
   
   lint:
-    runs-on: ubunut-latest
+    runs-on: windows-latest
     steps:
-      - run: echo "This is a lint job"
+      - run: echo "This is a lint job on windows-Latest"
   
   release:
-    runs-on: ubunut-latest
+    runs-on: macos-latest
     steps:
-      - run: echo "This is a release job"
+      - run: echo "This is a release job MacOS-Latest"
