@@ -1,0 +1,22 @@
+name: "Python Lint"
+
+on:
+  push:
+    branches:
+      - 'test_stage'
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@4v
+      - name: Set up Python ${{ matrix.python-version }}
+      - uses: actions/setup-python@5v
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Display Python Version
+        run: python -c "import sys; print(sys.version)"
+
