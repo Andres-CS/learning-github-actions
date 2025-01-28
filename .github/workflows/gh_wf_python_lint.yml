@@ -1,4 +1,4 @@
-name: "Python Lint"
+name: "GHActions Python Lint"
 
 on:
   push:
@@ -12,9 +12,9 @@ jobs:
       matrix:
         python-version: ["3.12"]
     steps:
-      - uses: actions/checkout@4v
+      - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@5v
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python Version
